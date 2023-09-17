@@ -238,7 +238,8 @@ def home():
 - So, after {%extends 'layout.html'%} we can add the {% block content %}{% endblock %} tag in the home page. And we can also remove some other boilerplate code too.
 
 ```html
-{% extends 'layout.html' %} {block content %}
+{% extends 'layout.html' %}
+{block content %}
 <h1>Home page</h1>
 {% endblock %}
 ```
@@ -248,7 +249,8 @@ def home():
 - to make the about page inherit the navbar we can follow the same process.
 
 ```html
-{%extends 'layout.html' %} {%block content %}
+{%extends 'layout.html' %}
+{%block content %}
 <h1>About page</h1>
 {%endblock %}
 ```
@@ -292,7 +294,8 @@ if __name__ == "__main__":
 - And we need to fix a simple issue with the hrefs in layout.html file.
 
 ```html
-.... <a href="{{ url_for('home') }}">Home</a>
+.... 
+<a href="{{ url_for('home') }}">Home</a>
 <!-- url_for is used to get the url of a page -->
 <a href="{{ url_for('about') }}">About</a>
 ....
