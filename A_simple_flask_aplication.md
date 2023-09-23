@@ -265,7 +265,7 @@ def home():
 .....
 ```
 
-- i kept everything same but changed the <h1> tag to LOGO.
+- i kept everything same but changed the `<h1>` tag to LOGO.
 
 - Now we can just remove the layout function from the main app file.
 
